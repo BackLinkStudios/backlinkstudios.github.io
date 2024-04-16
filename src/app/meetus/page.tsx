@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 export default function MeetUs() {
     return (
         <>
@@ -19,7 +20,7 @@ export default function MeetUs() {
                     <div className="row justify-content-center">
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/ceo.jpg" alt="" className="img-fluid rounded" />
+                                <img src="/team/ceo.jpg" alt="" className="img-fluid _._rounded-full" />
 
                                 <center>
                                     <div className="card-body mt-2 ">
@@ -53,7 +54,7 @@ export default function MeetUs() {
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/sourav.png" alt="" className="img-fluid rounded" />
+                                <img src="/team/sourav.png" alt="" className="img-fluid _._rounded-full" />
 
                                 <center>
                                     <div className="card-body mt-2 ">
@@ -86,7 +87,7 @@ export default function MeetUs() {
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/avijit.png" alt="" className="img-fluid rounded" />
+                                <img src="/team/avijit.png" alt="" className="img-fluid _._rounded-full" />
 
                                 <center>
                                     <div className="card-body mt-2 ">
@@ -121,7 +122,7 @@ export default function MeetUs() {
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/kuldip.png" alt="" className="img-fluid rounded" />
+                                <img src="/team/kuldip.png" alt="" className="img-fluid _._rounded-full" />
 
                                 <center>
                                     <div className="card-body mt-2 ">
@@ -154,7 +155,7 @@ export default function MeetUs() {
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/govinda.png" alt="" className="img-fluid rounded" />
+                                <img src="/team/govinda.png" alt="" className="img-fluid _._rounded-full" />
 
                                 <center>
                                     <div className="card-body mt-2 ">
@@ -187,7 +188,7 @@ export default function MeetUs() {
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/banku.png" alt="" className="img-fluid rounded" />
+                                <img src="/team/banku.png" alt="" className="img-fluid _._rounded-full" />
 
                                 <center>
                                     <div className="card-body mt-2 ">
@@ -220,7 +221,7 @@ export default function MeetUs() {
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/rahul.png" alt="" className="img-fluid rounded" />
+                                <img src="/team/rahul.png" alt="" className="img-fluid _._rounded-full" />
                                 <center>
                                     <div className="card-body mt-2 ">
                                         <div className="blog-item-meta">
@@ -252,7 +253,7 @@ export default function MeetUs() {
                         </div>
                         <div className="col-lg-4 col-md-6 mb-5">
                             <div className="card border-0 bg-transparent">
-                                <img src="/team/pradip.png" alt="" className="img-fluid rounded" />
+                                <img src="/team/pradip.png" alt="" className="img-fluid _._rounded-full" />
                                 <center>
                                     <div className="card-body mt-2 ">
                                         <div className="blog-item-meta">
