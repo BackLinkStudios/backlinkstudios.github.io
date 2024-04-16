@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./bootstrap-mod.scss";
+@import "bootstrap/scss/bootstrap.scss";
 
 body {
-    background-color: #160042;
     // left: 0;
     // top: 0;
     // position: fixed;
@@ -46,12 +47,13 @@ body {
 }
 .gradient_text {
     // @extend .h2_text;
-    background: linear-gradient(89.78deg, #C8BDFF -31.69%, #BAA6FF -22.78%, #6721FF 27.93%, #00CBFF 99.79%);
+    background: linear-gradient(89.78deg, #c8bdff -31.69%, #baa6ff -22.78%, #6721ff 27.93%, #00cbff 99.79%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.gradient_text::before, .gradient_text::after {
+.gradient_text::before,
+.gradient_text::after {
     content: " ";
     display: inline-block;
     width: 3px;
