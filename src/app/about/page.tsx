@@ -2,7 +2,7 @@ import "./styles.scss";
 export default function About() {
     return (
         <>
-            <div className="_._bg-fuchsia-900/0 _._mt-10">
+            <div className="_._mt-10">
                 <h2 className="h2_text">
                     About&nbsp;<span className="gradient_text">BackLinkStudios</span>
                 </h2>

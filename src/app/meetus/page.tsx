@@ -3,7 +3,7 @@ import "./styles.scss";
 export default function MeetUs() {
     return (
         <>
-            <div className="_._bg-fuchsia-900/0 _._mt-10">
+            <div className="container _._mt-10">
                 <h2 className="h2_text">
                     <span className="gradient_text">Meet Our Team Of Experts</span>
                 </h2>
@@ -13,7 +13,7 @@ export default function MeetUs() {
                     <div className="row justify-content-center">
                         <div className="col-lg-7 text-center">
                             <div className="section-title">
-                                <h2 className="mt-3 content-title text-white">Meet Our Team Of Experts</h2>
+                                <h2 className="mt-3 content-title text-white">Our Team</h2>
                             </div>
                         </div>
                     </div>
