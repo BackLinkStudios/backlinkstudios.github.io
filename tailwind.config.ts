@@ -9,13 +9,13 @@ const config: Config = {
     theme: {
         extend: {
             backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--___gradient-stops))",
+                "gradient-radial": "radial-gradient(var(--_._gradient-stops))",
                 "gradient-conic":
-                    "conic-gradient(from 180deg at 50% 50%, var(--___gradient-stops))",
+                    "conic-gradient(from 180deg at 50% 50%, var(--_._gradient-stops))",
             },
         },
     },
     plugins: [],
-    prefix: '___',
+    prefix: '_._',
 };
 export default config;

@@ -1,7 +1,7 @@
 export default function OurServices() {
     return (
         <>
-            <div className="___bg-fuchsia-900/15">
+            <div className="_._bg-fuchsia-900/15">
                 <h2 className="gradient_text">Our Services</h2>
             </div>
             <br />
