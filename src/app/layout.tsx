@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${outfit.className} tw-text-slate-200`}>
+            <body className={`${outfit.className} ___text-slate-200`}>
                 <Header />
                 {children}
                 <Footer />

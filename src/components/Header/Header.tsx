@@ -10,24 +10,24 @@ export default function Header() {
     const pathName = usePathname();
     return (
         <header>
-            <div className="tw-boredr tw-border-b-2 tw-border-fuchsia-600/20">
-                <div className="tw-container tw-mx-auto tw-flex tw-justify-end">
-                    <div className="tw-p-3 tw-text-lg tw-font-semibold">+91 1234567890</div>
-                    <div className="tw-p-3 tw-text-lg tw-font-semibold">email@domain.com</div>
+            <div className="___boredr ___border-b-2 ___border-fuchsia-600/20">
+                <div className="___container ___mx-auto ___flex ___justify-end">
+                    <div className="___p-3 ___text-lg ___font-semibold">+91 1234567890</div>
+                    <div className="___p-3 ___text-lg ___font-semibold">email@domain.com</div>
                 </div>
             </div>
-            <div className="tw-container tw-mx-auto tw-flex tw-flex-wrap md:tw-justify-between tw-justify-center tw-p-5">
-                <Link href="/" className="tw-flex title-font tw-font-medium tw-items-center tw-text-gray-900 tw-mb-4">
+            <div className="___container ___mx-auto ___flex ___flex-wrap md:___justify-between ___justify-center ___p-5">
+                <Link href="/" className="___flex title-font ___font-medium ___items-center ___text-gray-900 ___mb-4">
                     <img src="/logo.png" alt="logo" width="200px" height="auto" />
                     {/* <div className="logo_text">
                         <span className="text-[#fe5855]">Back</span>
                         <span className="text-[#6721ff]">Link</span>Studio.com
                     </div> */}
                 </Link>
-                <div className="tw-flex tw-flex-wrap tw-items-center tw-text-base tw-justify-center">
+                <div className="___flex ___flex-wrap ___items-center ___text-base ___justify-center">
                     {NavLinks.map((nav, i) => {
                         return (
-                            <Link key={i} href={nav.path} className={`tw-m-5 tw-text-nowrap ${pathName === nav.path ? "tw-text-[#6721ff]" : "tw-text-white"} tw-text-xl tw-font-semibold hover:tw-text-[#6721ff]`}>
+                            <Link key={i} href={nav.path} className={`___m-5 ___text-nowrap ${pathName === nav.path ? "___text-[#6721ff]" : "___text-white"} ___text-xl ___font-semibold hover:___text-[#6721ff]`}>
                                 {nav.name}
                             </Link>
                         );
