@@ -4,7 +4,7 @@ export default function MeetUs() {
     return (
         <>
             <div className="container _._mt-10">
-                <h2 className="h2_text">
+                <h2 className="h2_text _._text-center">
                     <span className="gradient_text">Meet Our Team Of Experts</span>
                 </h2>
             </div>

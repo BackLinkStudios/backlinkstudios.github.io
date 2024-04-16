@@ -5,13 +5,13 @@ import "./Footer.scss";
 export default function Footer() {
     return (
         <footer>
-            {/* BackLinkStudios.com &copy; 2024 */}
+            {/* BacklinkStudios.com &copy; 2024 */}
             <div className="container">
                 <div className="row">
                     <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                         <div className="footer-widget">
-                            <h4 className="fw-title">BackLinkStudios</h4>
-                            <div className="footer-link">At BackLinkStudios, we are not just about making profits. We aim to see our clients prosper and their busiWelcome to the link seller; here, we offer the best services that will ensure a boost to your ranking.</div>
+                            <h4 className="fw-title">BacklinkStudios</h4>
+                            <div className="footer-link">At BacklinkStudios, we are not just about making profits. We aim to see our clients prosper and their busiWelcome to the link seller; here, we offer the best services that will ensure a boost to your ranking.</div>
                         </div>
                     </div>
                     <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
@@ -54,7 +54,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="col-xl-3 col-lg-4 col-md-6">
-                        <h2 className="gradient_text">BackLinkStudios.com</h2>
+                        <h2 className="gradient_text">BacklinkStudios.com</h2>
                     </div>
                 </div>
             </div>
