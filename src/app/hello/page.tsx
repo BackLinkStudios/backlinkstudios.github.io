@@ -1,7 +1,7 @@
 export default function Hello() {
     return (
         <>
-            <div className="bg-fuchsia-900/15">
+            <div className="tw-bg-fuchsia-900/15">
                 <h2 className="gradient_text">Hello</h2>
             </div>
             <br />

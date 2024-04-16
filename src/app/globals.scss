@@ -34,7 +34,7 @@ body {
 
 .h2_text {
     // font-size: 10px;
-    @apply text-[38px] md:text-[55px] lg:text-[66px] xl:text-[70px];
+    @apply tw-text-[38px] md:tw-text-[55px] lg:tw-text-[66px] xl:tw-text-[70px];
     // line-height: 1;
     font-weight: 700;
     // margin-bottom: 20px;

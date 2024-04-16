@@ -1,7 +1,7 @@
 export default function MeetUs() {
     return (
         <>
-            <div className="bg-fuchsia-900/0 mt-10">
+            <div className="tw-bg-fuchsia-900/0 tw-mt-10">
                 <h2 className="h2_text">
                     <span className="gradient_text">Meet Our Team Of Experts</span>
                 </h2>
