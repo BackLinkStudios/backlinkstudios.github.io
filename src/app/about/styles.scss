@@ -1,0 +1,58 @@
+/* counter-three */
+.counter-content {
+	width: 80%;
+}
+.counter-content p {
+	margin-bottom: 0;
+	width: 82%;
+}
+.counter-item-wrap-three {
+	margin-left: 40px;
+}
+.counter-item-wrap-three .list-wrap {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	background: rgba(255 255 255 / 10%);
+	border: 1px solid rgba(255 255 255 / 20%);
+	border-radius: 30px;
+	position: relative;
+}
+.counter-item-wrap-three .list-wrap::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.1);
+	width: 100%;
+	height: 1px;
+}
+.counter-item-wrap-three .list-wrap::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	background: rgba(255, 255, 255, 0.1);
+	width: 1px;
+	height: 100%;
+}
+.counter-item-wrap-three .list-wrap li {
+	width: 50%;
+}
+.counter-item-three {
+	text-align: center;
+	padding: 43px 30px;
+}
+.counter-item-three .count {
+	font-size: 50px;
+	display: inline-flex;
+	align-items: center;
+	line-height: .8;
+	margin-bottom: 20px;
+	justify-content: center;
+}
+.counter-item-three p {
+	margin-bottom: 0;
+}

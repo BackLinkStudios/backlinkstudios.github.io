@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #160042;
+    // left: 0;
+    // top: 0;
+    // position: fixed;
+    background-position: center;
+    // background-size: cover;
+    background-size: 80vw auto;
+
+    background-repeat: no-repeat; /* Display the image once */
+    background-position: center; /* Center the image horizontally */
+
+    background-attachment: fixed;
+    // width: 100%;
+    // height: 100%;
+    z-index: 0;
+    background-image: url(/shape.png);
+    // &:before {
+    //     content: ""; /* Add content to avoid collapsing */
+    //     position: absolute;
+    //     inset: 0; /* Stretches to fill parent element */
+    //     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="); /* Noise background image */
+    //     background-repeat: repeat; /* Repeat the noise pattern */
+    //     background-size: 50px 50px; /* Adjust noise grain size */
+    //     filter: blur(10px); /* Apply blur effect */
+    //     opacity: 0.3; /* Adjust background opacity */
+    //     z-index: -1; /* Place behind content */
+    // }
+}
+
+.h2_text {
+    // font-size: 10px;
+    @apply text-[38px] md:text-[55px] lg:text-[66px] xl:text-[70px];
+    // line-height: 1;
+    font-weight: 700;
+    // margin-bottom: 20px;
+    // text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gradient_text {
+    // @extend .h2_text;
+    background: linear-gradient(89.78deg, #C8BDFF -31.69%, #BAA6FF -22.78%, #6721FF 27.93%, #00CBFF 99.79%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient_text::before, .gradient_text::after {
+    content: " ";
+    display: inline-block;
+    width: 3px;
+}
