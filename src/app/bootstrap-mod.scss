@@ -1,4 +1,7 @@
 $body-bg: #160042;
+a {
+    text-decoration: none !important;
+}
 $grid-breakpoints: (
   xxs: 0,
   xs: 320px,
