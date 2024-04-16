@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import "./styles.scss";
 export default function MeetUs() {
     return (
         <>
