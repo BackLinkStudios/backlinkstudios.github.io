@@ -68,3 +68,28 @@ body {
     border-radius: 0px;
     display: block;
 }
+
+.gicon {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(89.78deg, #c8bdff -31.69%, #baa6ff -22.78%, #6721ff 27.93%, #00cbff 99.79%);
+    position: relative;
+    font-size: 24px;
+    color: white;
+    z-index: 1;
+}
+.gicon::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+    border-radius: 50%;
+    background: #331a5d;
+    z-index: -1;
+}

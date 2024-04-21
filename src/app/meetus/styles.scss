@@ -1,3 +1,8 @@
 .img-fluid {
     @apply _._w-52 xs:_._w-52 sm:_._w-60 md:_._w-72 lg:_._w-80 xxl:_._w-3/4 _._border _._p-4 _._border-white/35 _._shadow-md _._bg-white/30;
 }
+.team {
+    border-radius: 30px;
+    border: 4px solid rgb(217 217 217 / 20%);
+    mix-blend-mode: exclusion;
+}
