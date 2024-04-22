@@ -1,5 +1,6 @@
 "use client";
 import { Component, ReactNode } from "react";
+import "./Typer.scss";
 
 /*
  * @link https://stackoverflow.com/questions/49886123/trying-to-create-a-typing-effect-on-reactjs
@@ -45,6 +46,11 @@ export default class Typer extends Component<any, any> {
         return "msg";
     }
     render(): ReactNode {
-        return <>{this.state.text}</>;
+        return (
+            <>
+                {this.state.text}
+                <span id="cursor" />
+            </>
+        );
     }
 }
