@@ -13,7 +13,7 @@ export default class Typer extends Component<any, any> {
             text: "BS",
             isDeleting: false,
             loopNum: 0,
-            typingSpeed: 150,
+            typingSpeed: 200,
         };
     }
     componentDidMount() {
@@ -27,7 +27,7 @@ export default class Typer extends Component<any, any> {
 
         this.setState({
             text: isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1),
-            typingSpeed: isDeleting ? 30 : 150,
+            typingSpeed: isDeleting ? 30 : 200,
         });
 
         if (!isDeleting && text === fullText) {

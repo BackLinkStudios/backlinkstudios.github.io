@@ -10,7 +10,7 @@ export default function MeetUs() {
             </div>
             <section className="section latest-blog bg-2">
                 <div className="container">
-                    <div className="row justify-content-center">
+                    <div className="row justify-content-center _._mb-10">
                         <div className="col-lg-7 text-center">
                             <div className="section-title">
                                 <h2 className="mt-3 content-title text-white">Our Team</h2>
