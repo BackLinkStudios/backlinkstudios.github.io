@@ -15,6 +15,9 @@ export default class Typer extends Component<any, any> {
             typingSpeed: 150,
         };
     }
+    componentDidMount() {
+        this.handleType();
+    }
     handleType = () => {
         const dataText = ["WELCOME TO THE WORLD", "THIS IS THE WEBSITE", "ITS A SEO SERVICE"];
         const { isDeleting, loopNum, text, typingSpeed } = this.state;
