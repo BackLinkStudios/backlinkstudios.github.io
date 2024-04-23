@@ -10,7 +10,7 @@ export default class Typer extends Component<any, any> {
         super(props);
 
         this.state = {
-            text: "BS",
+            text: "",
             isDeleting: false,
             loopNum: 0,
             typingSpeed: 130,
@@ -19,20 +19,22 @@ export default class Typer extends Component<any, any> {
     componentDidMount() {
         this.handleType();
     }
-    handleType = () => {
-        const dataText = ["WELCOME TO THE WORLD", "THIS IS THE WEBSITE", "ITS A SEO SERVICE","TEXT"];
+    handleType = async () => {
+        const dataText = ["BACK LINK", "WELCOME TO THE WORLD", "THIS IS THE WEBSITE", "ITS A SEO SERVICE", "TEXT"];
         const { isDeleting, loopNum, text, typingSpeed } = this.state;
         const i = loopNum % dataText.length;
         const fullText = dataText[i];
 
         this.setState({
             text: isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1),
-            typingSpeed: isDeleting ? 50 : 130,
+            typingSpeed: isDeleting ? 100 : 130,
         });
 
         if (!isDeleting && text === fullText) {
-            setTimeout(() => this.setState({ isDeleting: true }), 500);
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+            this.setState({ isDeleting: true });
         } else if (isDeleting && text === "") {
+            await new Promise((resolve) => setTimeout(resolve, 500));
             this.setState({
                 isDeleting: false,
                 loopNum: loopNum + 1,
