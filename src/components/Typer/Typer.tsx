@@ -13,25 +13,25 @@ export default class Typer extends Component<any, any> {
             text: "BS",
             isDeleting: false,
             loopNum: 0,
-            typingSpeed: 200,
+            typingSpeed: 130,
         };
     }
     componentDidMount() {
         this.handleType();
     }
     handleType = () => {
-        const dataText = ["WELCOME TO THE WORLD", "THIS IS THE WEBSITE", "ITS A SEO SERVICE"];
+        const dataText = ["WELCOME TO THE WORLD", "THIS IS THE WEBSITE", "ITS A SEO SERVICE","TEXT"];
         const { isDeleting, loopNum, text, typingSpeed } = this.state;
         const i = loopNum % dataText.length;
         const fullText = dataText[i];
 
         this.setState({
             text: isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1),
-            typingSpeed: isDeleting ? 30 : 200,
+            typingSpeed: isDeleting ? 50 : 130,
         });
 
         if (!isDeleting && text === fullText) {
-            setTimeout(() => this.setState({ isDeleting: true }), 500);
+            setTimeout(() => this.setState({ isDeleting: true }), 5);
         } else if (isDeleting && text === "") {
             this.setState({
                 isDeleting: false,
@@ -42,9 +42,6 @@ export default class Typer extends Component<any, any> {
         setTimeout(this.handleType, typingSpeed);
     };
 
-    get msg(): string {
-        return "msg";
-    }
     render(): ReactNode {
         return (
             <>
