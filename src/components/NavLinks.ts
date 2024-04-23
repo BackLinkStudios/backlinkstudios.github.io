@@ -1,7 +1,8 @@
+import { FaHouse, FaInfo, FaRegLightbulb, FaPeopleGroup } from "react-icons/fa6";
 export const NavLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/offered-services" },
-    { name: "Meet Us", path: "/meetus" },
-    // { name: "Hello Page", path: "/hello" },
+    { name: "Home", icon: FaHouse, path: "/" },
+    { name: "About", icon: FaInfo, path: "/about" },
+    { name: "Services", icon: FaRegLightbulb, path: "/offered-services" },
+    { name: "Meet Us", icon: FaPeopleGroup, path: "/meetus" },
+    // { name: "Hello Page", icon: FaPeopleGroup, path: "/hello" },
 ];
