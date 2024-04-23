@@ -31,7 +31,7 @@ export default class Typer extends Component<any, any> {
         });
 
         if (!isDeleting && text === fullText) {
-            setTimeout(() => this.setState({ isDeleting: true }), 5);
+            setTimeout(() => this.setState({ isDeleting: true }), 500);
         } else if (isDeleting && text === "") {
             this.setState({
                 isDeleting: false,
