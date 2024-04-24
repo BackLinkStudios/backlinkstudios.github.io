@@ -1,4 +1,4 @@
-import { FaHouse, FaInfo, FaRegLightbulb, FaPeopleGroup } from "react-icons/fa6";
+// import { FaHouse, FaInfo, FaRegLightbulb, FaPeopleGroup } from "react-icons/fa6";
 import { FcHome, FcAbout, FcServices, FcBusinessman } from "react-icons/fc";
 export const NavLinks = [
     { name: "Home", icon: FcHome, path: "/" },
