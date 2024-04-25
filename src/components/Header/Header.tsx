@@ -18,11 +18,15 @@ export default function Header() {
             </div>
             <div className="container _._flex _._flex-wrap md:_._justify-between _._justify-center _._p-2 _._md:p-5">
                 <Link href="/" className="_._flex title-font _._font-medium _._items-center _._text-gray-900 _._mb-4">
-                    <img src="/logo.png" alt="logo" width="200px" height="auto" />
+                    {/* <img src="/logo.png" alt="logo" width="200px" height="auto" /> */}
                     {/* <div className="logo_text">
-                        <span className="text-[#fe5855]">Back</span>
-                        <span className="text-[#6721ff]">Link</span>Studio.com
+                        <span className="_._text-[#fe5855]">Back</span>
+                        <span className="_._text-[#6721ff]">Link</span>Studio.com
                     </div> */}
+                    <span className="large">B</span>
+                    <span className="large S">S</span>
+                    <span className="nor-text Backlink">Backlink</span>
+                    <span className="nor-text Studios">Studios</span>
                 </Link>
                 <div className="_._flex _._flex-wrap _._items-center _._text-base _._justify-center">
                     {NavLinks.map((nav, i) => {

@@ -6,3 +6,23 @@
     // @apply _._ring-2 _._ring-purple-500 _._ring-offset-4 _._ring-offset-slate-50 dark:_._ring-offset-slate-900;
     @apply _._text-[#6721ff] _._border-b _._border-white;
 }
+
+.large{
+    @apply _._text-white/50;
+    font-size: 160px;
+    line-height: 125px;
+    text-shadow: 0 0 20px #6400ff;
+}
+.S{
+    margin-bottom: -11%;
+    margin-left: -13%;
+}
+.nor-text{
+    font-size: 20px;
+}
+.Backlink {
+    color: red;
+}
+.Studios {
+ color: white;
+}
