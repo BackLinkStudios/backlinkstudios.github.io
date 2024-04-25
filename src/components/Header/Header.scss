@@ -2,3 +2,7 @@
     font-size: 40px;
     @apply _._text-white;
 }
+.active-link{
+    // @apply _._ring-2 _._ring-purple-500 _._ring-offset-4 _._ring-offset-slate-50 dark:_._ring-offset-slate-900;
+    @apply _._text-[#6721ff] _._border-b _._border-white;
+}
