@@ -1,8 +1,44 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+import handleViewport, { type InjectedViewportProps } from "react-in-viewport";
 import "./styles.scss";
 import { PiFacebookLogo, PiTwitterLogo, PiLinkedinLogo, PiEnvelopeSimple } from "react-icons/pi";
 import { FaSkype } from "react-icons/fa6";
 import { Members } from "@/components/Members";
+
+const Member = handleViewport(
+    (props: any) => {
+        const { inViewport, forwardedRef, enterCount, mem } = props;
+        return (
+            <div ref={forwardedRef} className={`col-lg-4 col-md-6 mb-5 ${inViewport && enterCount === 1 ? "animate__animated animate__flipInX animate__slow" : ""}`}>
+                <div className="card border-0 bg-transparent">
+                    <center>
+                        <img src={`/team/${mem.photo}`} alt={mem.name} className="img-fluid _._rounded-full" />
+                        <div className="card-body mt-2 ">
+                            <div className="blog-item-meta">
+                                <a href={`mailto:${mem.email}`} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
+                                    <PiEnvelopeSimple />
+                                </a>
+                                <a href={mem.linkendin} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
+                                    <PiLinkedinLogo />
+                                </a>
+                                <a href={mem.facebook} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
+                                    <PiFacebookLogo />
+                                </a>
+                                <a href={mem.twitter} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
+                                    <PiTwitterLogo />
+                                </a>
+                                {getSkype(mem.skype)}
+                            </div>
+                            <h3 className="mt-3 mb-5 lh-36 text-white animate__animated animate__flipInX animate__slower">{mem.name}</h3>
+                            <a className="btn btn-small btn-solid-border btn-round-full text-white">{mem.designation}</a>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        );
+    } /**, options: {}, config: {} **/
+);
 function getSkype(s: string) {
     return s != "" ? (
         <>
@@ -39,34 +75,7 @@ export default function MeetUs() {
 
                     <div className="row justify-content-center">
                         {Members.map((mem, i) => {
-                            return (
-                                <div key={i} className="col-lg-4 col-md-6 mb-5">
-                                    <div className="card border-0 bg-transparent">
-                                        <center>
-                                            <img src={`/team/${mem.photo}`} alt={mem.name} className="img-fluid _._rounded-full" />
-                                            <div className="card-body mt-2 ">
-                                                <div className="blog-item-meta">
-                                                    <a href={`mailto:${mem.email}`} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
-                                                        <PiEnvelopeSimple />
-                                                    </a>
-                                                    <a href={mem.linkendin} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
-                                                        <PiLinkedinLogo />
-                                                    </a>
-                                                    <a href={mem.facebook} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
-                                                        <PiFacebookLogo />
-                                                    </a>
-                                                    <a href={mem.twitter} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
-                                                        <PiTwitterLogo />
-                                                    </a>
-                                                    {getSkype(mem.skype)}
-                                                </div>
-                                                <h3 className="mt-3 mb-5 lh-36 text-white animate__animated animate__flipInX animate__slower">{mem.name}</h3>
-                                                <a className="btn btn-small btn-solid-border btn-round-full text-white">{mem.designation}</a>
-                                            </div>
-                                        </center>
-                                    </div>
-                                </div>
-                            );
+                            return <Member key={i} mem={mem} />;
                         })}
                     </div>
                 </div>
