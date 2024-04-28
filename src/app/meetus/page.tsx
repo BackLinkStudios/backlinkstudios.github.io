@@ -30,7 +30,7 @@ const Member = handleViewport(
                                 </a>
                                 {getSkype(mem.skype)}
                             </div>
-                            <h3 className="mt-3 mb-5 lh-36 text-white animate__animated animate__flipInX animate__slower">{mem.name}</h3>
+                            <h3 className="mt-3 mb-5 lh-36 text-white">{mem.name}</h3>
                             <a className="btn btn-small btn-solid-border btn-round-full text-white">{mem.designation}</a>
                         </div>
                     </center>
