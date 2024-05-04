@@ -26,30 +26,20 @@
 .Studios {
     color: white;
 }
-.axul {
-    // margin: 40px;
-    // padding: 0 40px;
-    // background-color: #32557f;
-    // min-width: 200px;
-}
 
 .axa {
     display: inline-block;
     text-decoration: none;
-    color: #fff;
-    // font-size: 18px;
     letter-spacing: 2px;
-    text-transform: uppercase;
     position: relative;
     transition: all 0.4s ease;
-    // padding: 30px;
 }
 
 .axa::after {
     content: "";
     position: absolute;
     height: 2px;
-    background-color: #f69ec4;
+    background-color: #6721ff;
     width: 0;
     left: 50%;
     bottom: 0;
@@ -58,7 +48,7 @@
 }
 
 .axa:hover {
-    color: #f69ec4;
+    color: #6721ff;
 }
 .axa:hover::after {
     width: 100%;
