@@ -1,28 +1,65 @@
-.logo_text{
+.logo_text {
     font-size: 40px;
     @apply _._text-white;
 }
-.active-link{
+.active-link {
     // @apply _._ring-2 _._ring-purple-500 _._ring-offset-4 _._ring-offset-slate-50 dark:_._ring-offset-slate-900;
     @apply _._text-[#6721ff] _._border-b _._border-white;
 }
 
-.large{
+.large {
     @apply _._text-white/50;
     font-size: 160px;
     line-height: 125px;
     text-shadow: 0 0 20px #6400ff;
 }
-.S{
+.S {
     margin-bottom: -11%;
     margin-left: -13%;
 }
-.nor-text{
+.nor-text {
     font-size: 20px;
 }
 .Backlink {
     color: red;
 }
 .Studios {
- color: white;
+    color: white;
+}
+.axul {
+    // margin: 40px;
+    // padding: 0 40px;
+    // background-color: #32557f;
+    // min-width: 200px;
+}
+
+.axa {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    // font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.4s ease;
+    // padding: 30px;
+}
+
+.axa::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: #f69ec4;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+}
+
+.axa:hover {
+    color: #f69ec4;
+}
+.axa:hover::after {
+    width: 100%;
 }
