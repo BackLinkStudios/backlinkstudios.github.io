@@ -26,7 +26,10 @@
 .Studios {
     color: white;
 }
-
+// .axa {
+//     transform: scale(1) !important;
+//     transition: all 0.4s ease !important;
+// }
 .axa,
 .active-link::after {
     display: inline-block;
@@ -48,7 +51,10 @@
     transform: translateX(-50%);
     transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
-
+// .axa:hover {
+//     transform: scale(1.2) !important;
+//     transition: all 0.4s ease !important;
+// }
 .axa:hover,
 .active-link {
     color: #6721ff;

@@ -1,0 +1,9 @@
+export const Services = [
+    { heading: "SEO", body: "We ensure that our customers’ products are not just ranked; we go the extra mile to ensure they are top of mind and top of the competition with the help of search engine optimization services. Our target is the keyword best for their business, services, or products matching customers intentions." },
+    { heading: "Copywriting", body: "One of our services includes copywriting, and we develop persuasive content for marketing and sales to generate conversions and sales. Examples include websites, emails, catalogs, advertisements, and others. We help you develop it professionally with the help of our qualified copywriters, who ensure it meets all the standards." },
+    { heading: "Backlink", body: "We help them design a responsive website, and from that, they can grow their business. We develop custom responsive websites and landing pages that help them create a brand. We offer the best and most professional website development services at a very affordable price." },
+    { heading: "Link Building", body: "We help our customers realize their value and be unique in a crowded market, taking time to listen, learn and even understand. We condense our findings to something new compelling, and meaningful. Our hard work helps up get the desired results time and time again." },
+    { heading: "Guest Blogging", body: "One of our goals is to provide you with a way to attain your target audience without paying for ads. When you get people on your site, you can delight them with your quality products, intriguing copy, and a motivating call to action." },
+    { heading: "Niche Edits", body: "We also offer services such as inserting links in already existing pieces of content that have already been published on the web. We use this SEO strategy to help most clients sell their products. We ensure customer satisfaction by doing extra that you can only get with us." },
+    // { heading: "", body: "" },
+]
