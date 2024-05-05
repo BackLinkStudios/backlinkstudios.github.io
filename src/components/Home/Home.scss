@@ -17,3 +17,15 @@
         transform: rotateX(90deg);
     }
 }
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(89.78deg, rgba(200 184 232 / 20%) -31.69%, rgba(103 33 255 / 20%) -22.78%, rgba(103 33 255 / 20%) 27.93%, rgba(0 203 255 / 20%) 99.79%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    // display: flex;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    padding: 35px 40px 40px;
+    // gap: 30px 40px;
+    margin: 20px;
+}
