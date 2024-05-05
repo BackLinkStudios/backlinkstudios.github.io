@@ -4,7 +4,7 @@
 }
 .active-link {
     // @apply _._ring-2 _._ring-purple-500 _._ring-offset-4 _._ring-offset-slate-50 dark:_._ring-offset-slate-900;
-    @apply _._text-[#6721ff] _._border-b _._border-white;
+    // @apply _._text-[#6721ff] _._border-b _._border-white;
 }
 
 .large {
@@ -27,7 +27,8 @@
     color: white;
 }
 
-.axa {
+.axa,
+.active-link::after {
     display: inline-block;
     text-decoration: none;
     letter-spacing: 2px;
@@ -35,7 +36,8 @@
     transition: all 0.4s ease;
 }
 
-.axa::after {
+.axa::after,
+.active-link::after {
     content: "";
     position: absolute;
     height: 2px;
@@ -47,9 +49,11 @@
     transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
 
-.axa:hover {
+.axa:hover,
+.active-link {
     color: #6721ff;
 }
-.axa:hover::after {
+.axa:hover::after,
+.active-link::after {
     width: 100%;
 }
