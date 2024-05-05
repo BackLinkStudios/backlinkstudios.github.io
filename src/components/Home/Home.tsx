@@ -19,7 +19,7 @@ export const Home: FC<any> = (): ReactElement => {
     return (
         <>
             <div className="container _._mt-10">
-                <h2 className="h2_text _._text-center anim">Get the Targeted and Relevant Traffic.</h2>
+                <h2 className="h2_text _._text-center anim">Get the Targeted and Relevant Traffic,</h2>
                 <h2 className="h2_text _._text-center">
                     <span className="gradient_text">
                         <Typer />
@@ -51,7 +51,8 @@ export const Home: FC<any> = (): ReactElement => {
                         return (
                             <Col key={i} sm={12} md={6} lg={4}>
                                 <div className="box">
-                                    <h2>{service.heading}</h2>
+                                    <img src={`/${service.icon}`} alt="" />
+                                    <h3>{service.heading}</h3>
                                     <p>{service.body}</p>
                                 </div>
                             </Col>

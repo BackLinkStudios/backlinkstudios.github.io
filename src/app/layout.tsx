@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Outfit } from "next/font/google";
+import { Inter, Outfit, Nanum_Gothic, Prompt } from "next/font/google";
 import "./globals.scss";
 import "animate.css";
 import Footer from "@/components/Footer/Footer";
@@ -8,6 +7,14 @@ import Header from "@/components/Header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
+const prompt_font = Prompt({
+    subsets: ["latin"],
+    weight: "400"
+});
+const Nanum_Gothic_font = Nanum_Gothic({
+    subsets: ["latin"],
+    weight: "400",
+});
 
 export const metadata: Metadata = {
     title: "BS",
@@ -21,7 +28,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${outfit.className} _._text-slate-200`}>
+            <body className={`${prompt_font.className} _._text-slate-200 _._text-[1.1rem]`}>
                 <Header />
                 {children}
                 <Footer />

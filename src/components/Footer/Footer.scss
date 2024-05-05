@@ -5,13 +5,19 @@ ul,
 ol {
     padding-left: 0 !important;
 }
+.fw-title {
+    color: #0093ff;
+}
 .fw-title::after {
     display: block;
     content: " ";
-    padding: 1px;
-    background: linear-gradient(45deg, #a900ff, transparent);
+    padding: 2px;
+    background: linear-gradient(45deg, #7a00ff, transparent);
+    border-radius: 10px;
     width: 100%;
 }
 .footer-link {
     padding: 5px;
+    font-size: small;
+    line-height: normal;
 }

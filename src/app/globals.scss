@@ -35,7 +35,7 @@ body {
 
 .h2_text {
     // font-size: 10px;
-    @apply _._text-[38px] md:_._text-[55px] lg:_._text-[66px] xl:_._text-[70px];
+    @apply _._text-[38px] md:_._text-[55px] lg:_._text-[66px] xl:_._text-[68px];
     // line-height: 1;
     font-weight: 700;
     // margin-bottom: 20px;
@@ -48,7 +48,7 @@ body {
 }
 .gradient_text {
     // @extend .h2_text;
-    background: linear-gradient(89.78deg, #c8bdff -31.69%, #baa6ff -22.78%, #6721ff 27.93%, #00cbff 99.79%);
+    background: linear-gradient(51deg, #c8bdff -31.69%, #baa6ff -22.78%, #6721ff 27.93%, #00cbff 99.79%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -76,7 +76,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: linear-gradient(89.78deg, #c8bdff -31.69%, #baa6ff -22.78%, #6721ff 27.93%, #00cbff 99.79%);
+    background: linear-gradient(51deg, #c8bdff -31.69%, #baa6ff -22.78%, #6721ff 27.93%, #00cbff 99.79%);
     position: relative;
     font-size: 24px;
     color: white;
@@ -92,4 +92,22 @@ body {
     border-radius: 50%;
     background: #331a5d;
     z-index: -1;
+}
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(51deg, rgba(200 184 232 / 20%) -31.69%, rgba(103 33 255 / 20%) -22.78%, rgba(103 33 255 / 20%) 27.93%, rgba(0 203 255 / 20%) 99.79%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    // display: flex;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    padding: 35px 40px 40px;
+    // gap: 30px 40px;
+    margin: 20px;
+    transition: 0.3s linear;
+    transform: translateY(0);
+}
+
+.box:hover {
+    transform: translateY(-4px);
 }

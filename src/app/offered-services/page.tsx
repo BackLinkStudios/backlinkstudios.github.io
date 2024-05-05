@@ -7,7 +7,7 @@ import { Services } from "@/components/ServiceList";
 export default function OurServices() {
     return (
         <>
-            <div className="container _._mt-10 label">
+            <div className="container _._mt-10">
                 <h2 className="h2_text gradient_text _._text-center _._text-wrap animate__animated animate__flipInX animate__slower">Our Services</h2>
             </div>
             <Container>
@@ -15,7 +15,7 @@ export default function OurServices() {
                     {Services.map((service, i) => {
                         return (
                             <Col key={i} sm={12} md={6} lg={4}>
-                                <div className="box">
+                                <div className="box animate__animated animate__flipInX animate__slower">
                                     <h2>{service.heading}</h2>
                                     <p>{service.body}</p>
                                 </div>
