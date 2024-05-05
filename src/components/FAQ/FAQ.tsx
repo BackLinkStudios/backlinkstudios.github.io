@@ -1,6 +1,6 @@
 import "./FAQ.scss";
 
-export default function Footer() {
+export default function FAQ() {
     return (
         <>
             <section className="faq-area pb-150">
