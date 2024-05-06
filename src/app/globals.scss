@@ -5,32 +5,14 @@
 @import "bootstrap/scss/bootstrap.scss";
 
 body {
-    // left: 0;
-    // top: 0;
-    // position: fixed;
-    background-position: center;
-    // background-size: cover;
-    background-size: 80vw auto;
-
+    background-size: 100vw auto;
     background-repeat: no-repeat; /* Display the image once */
-    background-position: center; /* Center the image horizontally */
+    background-position: center center; /* Center the image horizontally */
 
     background-attachment: fixed;
-    // width: 100%;
-    // height: 100%;
     z-index: 0;
     background-image: url(/shape.png);
-    // &:before {
-    //     content: ""; /* Add content to avoid collapsing */
-    //     position: absolute;
-    //     inset: 0; /* Stretches to fill parent element */
-    //     background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="); /* Noise background image */
-    //     background-repeat: repeat; /* Repeat the noise pattern */
-    //     background-size: 50px 50px; /* Adjust noise grain size */
-    //     filter: blur(10px); /* Apply blur effect */
-    //     opacity: 0.3; /* Adjust background opacity */
-    //     z-index: -1; /* Place behind content */
-    // }
+    // background: radial-gradient(ellipse at center 0%, #e66465, transparent), radial-gradient(ellipse at 100%, #4d9f0c, transparent);
 }
 
 .h2_text {
@@ -101,7 +83,7 @@ body {
     // display: flex;
     // align-items: flex-start;
     // justify-content: space-between;
-    padding: 35px 40px 40px;
+    padding: 28px;
     // gap: 30px 40px;
     margin: 20px;
     transition: 0.3s linear;
@@ -109,5 +91,5 @@ body {
 }
 
 .box:hover {
-    transform: translateY(-4px);
+    transform: translateY(-10px);
 }

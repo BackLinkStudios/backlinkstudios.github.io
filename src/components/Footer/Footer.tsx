@@ -11,7 +11,7 @@ export default function Footer() {
                         <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div className="footer-widget">
                                 <h4 className="fw-title">BacklinkStudios</h4>
-                                <div className="footer-link">At BacklinkStudios, we are not just about making profits. We aim to see our clients prosper and their busiWelcome to the link seller; here, we offer the best services that will ensure a boost to your ranking.</div>
+                                <div className="footer-link">At BacklinkStudios, we are not just about making profits. We aim to see our clients prosper and their busiWelcome to BacklinkStudios; here, we offer the best services that will ensure a boost to your ranking.</div>
                             </div>
                         </div>
                         <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
@@ -50,10 +50,12 @@ export default function Footer() {
                         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                             <div className="footer-widget">
                                 <h4 className="fw-title">Office</h4>
-                                <div className="footer-contact">
-                                    <p>Bankura (West Bengal India) 722137</p>
-                                    <p>+91 9800358963</p>
-                                    <p>thelinkseller@gmail.com</p>
+                                <div className="footer-link">
+                                    <ul className="list-wrap">
+                                        <li>Bankura (West Bengal India) 722137</li>
+                                        <li>+91 9800358963</li>
+                                        <li>thelinkseller@gmail.com</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

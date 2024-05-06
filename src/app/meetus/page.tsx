@@ -30,7 +30,7 @@ const Member = handleViewport(
                                 </a>
                                 {getSkype(mem.skype)}
                             </div>
-                            <h3 className="mt-3 mb-5 lh-36 text-white">{mem.name}</h3>
+                            <h3 className="my-1 lh-36 text-white">{mem.name}</h3>
                             <a className="btn btn-small btn-solid-border btn-round-full text-white">{mem.designation}</a>
                         </div>
                     </center>
@@ -55,7 +55,7 @@ function getSkype(s: string) {
 export default function MeetUs() {
     return (
         <>
-            <div className="container _._mt-10 label">
+            <div className="container _._mt-10">
                 <h2 className="h2_text _._text-center">
                     <span className="gradient_text">Meet Our Team Of Experts</span>
                 </h2>
