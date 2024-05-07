@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./Header.scss";
 import { usePathname } from "next/navigation";
 import { NavLinks } from "@/components/NavLinks";
+import { ExampleLogo } from "../ExampleLogo/ExampleLogo";
 // import logo from "../../../public/logo.png";
 // import logo from './logo.png';
 // import Image from "next/image";
@@ -18,7 +19,8 @@ export default function Header() {
             </div>
             <div className="container _._flex _._flex-wrap md:_._justify-between _._justify-center _._p-2 _._md:p-5">
                 <Link href="/" className="_._flex title-font _._font-medium _._items-center _._text-gray-900 _._mb-4">
-                    <img src="/logo.png" alt="logo" width="200px" height="auto" className="animate__animated animate__backInLeft animate__faster`" />
+                    {/* <img src="/logo.png" alt="logo" width="200px" height="auto" className="animate__animated animate__backInLeft animate__faster`" /> */}
+                    <ExampleLogo />
                     {/* <div className="logo_text">
                         <span className="_._text-[#fe5855]">Back</span>
                         <span className="_._text-[#6721ff]">Link</span>Studio.com
