@@ -2,7 +2,6 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import "./ExampleLogo.scss";
 
-
 const icon = {
     hidden: {
         opacity: 0,
