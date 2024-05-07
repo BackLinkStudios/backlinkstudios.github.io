@@ -11,7 +11,7 @@ const icon = {
     visible: {
         opacity: 1,
         pathLength: 1,
-        fill: "rgba(255, 2, 70 , 0.3)",
+        fill: "rgba(254, 107, 146 , 0.5)",
     },
 };
 
