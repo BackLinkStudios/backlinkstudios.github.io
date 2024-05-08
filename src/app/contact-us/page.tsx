@@ -9,18 +9,21 @@ export default function ContactUs() {
                     <span className="gradient_text">Contact Us</span>
                 </h2>
             </div>
-            <div className="container _._mx-auto _._px-5 _._mt-40">
+            <div className="container _._mx-auto _._px-5 _._my-40">
                 <div className="row">
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 animate__animated animate__fadeInLeft animate__slow">
-                        <b>Send a message</b>
-                        <h2 className="_._text-[34px] md:_._text-[38px]">Contact Form</h2>
                         {/* <div className="_._text-lg _._text-white/60">abc</div> */}
-                        <form action="">
-                            <input type="text" name="name" id="name" placeholder="Name" />
-                            <input type="email" name="email" id="email" placeholder="email" />
-                            <input type="phone" name="phone" id="phone" placeholder="phone" />
-                            <textarea name="message" id="message"></textarea>
-                        </form>
+                        <div className="contact-form">
+                            <b>Send a message</b>
+                            <h2 className="_._text-[34px] md:_._text-[38px]">Contact Form</h2>
+                            <form action="">
+                                <input type="text" name="name" id="name" placeholder="Your Name" />
+                                <input type="email" name="email" id="email" placeholder="Your Email" />
+                                <input type="phone" name="phone" id="phone" placeholder="Your Phone" />
+                                <textarea name="message" id="message" placeholder="Please describe what you need*"></textarea>
+                                <input type="button" value="Submit" />
+                            </form>
+                        </div>
                     </div>
                     <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 animate__animated animate__fadeInright animate__slow">
                         <b>We are Professionals</b>
