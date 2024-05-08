@@ -37,9 +37,9 @@ export const Home: FC<any> = (): ReactElement => {
                     <Col sm={12} md={6} lg={6}>
                         <div className="_._p-2 _._flex _._align-middle _._justify-center _._items-center">
                             <div>
-                                <b>Welcome to The BacklinkStudios</b>
+                                <b>Welcome to The Backlink Studios</b>
                                 <h1>Boost Your Ranking</h1>
-                                <p>At BacklinkStudios, we are not just about making profits. We aim to see our clients prosper and their business .Welcome to the link seller; here, we offer the best services that will ensure a boost to your ranking. We are digital specialists who help re-known brands push their brands beyond boundaries. We help our clients achieve this by ensuring best practices, such as using the best marketing techniques and data-driven insights and developing processes that unlock their business growth.</p>
+                                <p>At Backlink Studios, we are not just about making profits. We aim to see our clients prosper and their business .Welcome to the link seller; here, we offer the best services that will ensure a boost to your ranking. We are digital specialists who help re-known brands push their brands beyond boundaries. We help our clients achieve this by ensuring best practices, such as using the best marketing techniques and data-driven insights and developing processes that unlock their business growth.</p>
                             </div>
                         </div>
                     </Col>

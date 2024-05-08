@@ -18,7 +18,7 @@ const Nanum_Gothic_font = Nanum_Gothic({
 
 export const metadata: Metadata = {
     title: "BS",
-    description: "BacklinkStudios | Search Engine Optimization,Copywriting,Backlinking,Link Building,Guest Blogging,Niche Edits",
+    description: "Backlink Studios | Search Engine Optimization,Copywriting,Backlinking,Link Building,Guest Blogging,Niche Edits",
 };
 
 export default function RootLayout({

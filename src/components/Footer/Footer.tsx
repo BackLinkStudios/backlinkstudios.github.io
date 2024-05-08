@@ -10,8 +10,8 @@ export default function Footer() {
                     <div className="row">
                         <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
                             <div className="footer-widget">
-                                <h4 className="fw-title">BacklinkStudios</h4>
-                                <div className="footer-link">At BacklinkStudios, we are not just about making profits. We aim to see our clients prosper and their busiWelcome to BacklinkStudios; here, we offer the best services that will ensure a boost to your ranking.</div>
+                                <h4 className="fw-title">Backlink Studios</h4>
+                                <div className="footer-link">At Backlink Studios, we are not just about making profits. We aim to see our clients prosper and their busiWelcome to Backlink Studios; here, we offer the best services that will ensure a boost to your ranking.</div>
                             </div>
                         </div>
                         <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6">
