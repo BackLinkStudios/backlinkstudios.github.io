@@ -3,6 +3,7 @@ import "./styles.scss";
 import FAQ from "@/components/FAQ/FAQ";
 import { PiEnvelopeSimple } from "react-icons/pi";
 import { Services } from "@/components/ServiceList";
+import Link from "next/link";
 
 export default function OurServices() {
     return (
@@ -15,14 +16,17 @@ export default function OurServices() {
                     {Services.map((service, i) => {
                         return (
                             <Col key={i} sm={12} md={6} lg={4}>
-                                <div className="box animate__animated animate__flipInX animate__slower">
-                                    <h2>{service.heading}</h2>
-                                    <p>{service.body}</p>
-                                </div>
+                                <Link href={`/offered-services/${service.link}`} className="_._text-white">
+                                    <div className="box animate__animated animate__flipInX animate__slow">
+                                        <img src={`/${service.icon}`} alt="" />
+                                        <h2>{service.heading}</h2>
+                                        <p>{service.body}</p>
+                                    </div>
+                                </Link>
                             </Col>
                         );
                     })}
-                    {Services.map((service, i) => {
+                    {/* {Services.map((service, i) => {
                         return (
                             <Col key={i} sm={12} md={6} lg={4}>
                                 <div className="writing-item">
@@ -44,10 +48,10 @@ export default function OurServices() {
                                 </div>
                             </Col>
                         );
-                    })}
+                    })} */}
                 </Row>
             </Container>
-            <FAQ></FAQ>
+            {/* <FAQ></FAQ> */}
         </>
     );
 }

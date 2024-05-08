@@ -4,6 +4,7 @@ import { FC, ReactElement } from "react";
 import Typer from "@/components/Typer/Typer";
 import { Container, Row, Col } from "react-bootstrap";
 import { Services } from "../ServiceList";
+import Link from "next/link";
 // export default function Home() {
 //     return (
 //         <>
@@ -36,11 +37,11 @@ export const Home: FC<any> = (): ReactElement => {
                     </Col>
                     <Col sm={12} md={6} lg={6}>
                         <div className="_._p-2 _._flex _._align-middle _._justify-center _._items-center">
-                            <div>
+                            <span>
                                 <b>Welcome to The Backlink Studios</b>
                                 <h1>Boost Your Ranking</h1>
                                 <p>At Backlink Studios, we are not just about making profits. We aim to see our clients prosper and their business .Welcome to the link seller; here, we offer the best services that will ensure a boost to your ranking. We are digital specialists who help re-known brands push their brands beyond boundaries. We help our clients achieve this by ensuring best practices, such as using the best marketing techniques and data-driven insights and developing processes that unlock their business growth.</p>
-                            </div>
+                            </span>
                         </div>
                     </Col>
                 </Row>
@@ -49,12 +50,16 @@ export const Home: FC<any> = (): ReactElement => {
                 <Row>
                     {Services.map((service, i) => {
                         return (
-                            <Col key={i} sm={12} md={6} lg={4}>
-                                <div className="box">
-                                    <img src={`/${service.icon}`} alt="" />
-                                    <h3>{service.heading}</h3>
-                                    <p>{service.body}</p>
-                                </div>
+                            <Col key={i} sm={12} md={6} lg={6}>
+                                <Link href={`/offered-services/${service.link}`} className="box _._flex _._flex-col md:_._flex-row _._text-white">
+                                    <div className="md:_._mr-5">
+                                        <img src={`/${service.icon}`} alt="" width="1000px" height="auto" />
+                                    </div>
+                                    <div>
+                                        <h3>{service.heading}</h3>
+                                        <p>{service.body}</p>
+                                    </div>
+                                </Link>
                             </Col>
                         );
                     })}
