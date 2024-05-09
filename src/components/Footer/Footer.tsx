@@ -60,6 +60,7 @@ export default function Footer() {
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-4 col-md-6">
+                            <img src="/bs_logo.png" alt="logo" width="80px" height="auto" className="animate__animated animate__backInRight animate__faster`" />
                             <h2 className="gradient_text">BacklinkStudios.com</h2>
                         </div>
                     </div>

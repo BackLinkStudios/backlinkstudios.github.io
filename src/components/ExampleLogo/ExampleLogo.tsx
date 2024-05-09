@@ -6,12 +6,12 @@ const icon_b = {
     hidden: {
         opacity: 0,
         pathLength: 0,
-        fill: "rgba(255, 2, 70, 0)",
+        fill: "rgba(109, 52, 243, 0)",
     },
     visible: {
         opacity: 1,
         pathLength: 1,
-        fill: "rgba(254, 2, 70 , 0.5)",
+        fill: "rgba(109, 52, 243 , 1)",
     },
 };
 const icon_s = {
