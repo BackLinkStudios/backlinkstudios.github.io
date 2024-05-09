@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import "./styles.scss";
 
 export default function ContactUs() {
@@ -21,7 +22,7 @@ export default function ContactUs() {
                                 <input type="email" name="email" id="email" placeholder="Your Email" />
                                 <input type="phone" name="phone" id="phone" placeholder="Your Phone" />
                                 <textarea name="message" id="message" placeholder="Please describe what you need*"></textarea>
-                                <input type="button" value="Submit" />
+                                <motion.input whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} type="button" value="SUBMIT"/>
                             </form>
                         </div>
                     </div>

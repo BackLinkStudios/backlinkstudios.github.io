@@ -19,7 +19,7 @@ import Link from "next/link";
 export const Home: FC<any> = (): ReactElement => {
     return (
         <>
-            <div className="container _._mt-10">
+            <div className="container _._mt-10 animate__animated animate__flipInX animate__slow">
                 <h2 className="h2_text _._text-center anim">Get the Targeted and Relevant Traffic,</h2>
                 <h2 className="h2_text _._text-center">
                     <span className="gradient_text">

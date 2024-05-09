@@ -1,15 +1,17 @@
+"use client";
 import { Col, Container, Row } from "react-bootstrap";
 import "./styles.scss";
 import FAQ from "@/components/FAQ/FAQ";
 import { PiEnvelopeSimple } from "react-icons/pi";
 import { Services } from "@/components/ServiceList";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function OurServices() {
     return (
         <>
             <div className="container _._mt-10">
-                <h2 className="h2_text gradient_text _._text-center _._text-wrap animate__animated animate__flipInX animate__slower">Our Services</h2>
+                <h2 className="h2_text gradient_text animate__animated animate__flipInX animate__slower _._text-center _._text-wrap animate__animated animate__flipInX animate__slower">Our Services</h2>
             </div>
             <Container>
                 <Row>
@@ -17,11 +19,11 @@ export default function OurServices() {
                         return (
                             <Col key={i} sm={12} md={6} lg={4}>
                                 <Link href={`/offered-services/${service.link}`} className="_._text-white">
-                                    <div className="box animate__animated animate__flipInX animate__slow">
+                                    <motion.div className="box" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                                         <img src={`/${service.icon}`} alt="" />
                                         <h2>{service.heading}</h2>
                                         <p>{service.body}</p>
-                                    </div>
+                                    </motion.div>
                                 </Link>
                             </Col>
                         );
