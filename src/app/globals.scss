@@ -4,6 +4,27 @@
 @import "./bootstrap-mod.scss";
 @import "bootstrap/scss/bootstrap.scss";
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px !important;
+    height: 0px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #8400ff !important;
+    border-radius: 10px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #8400ff !important;
+}
+
 body {
     background-size: 100vw auto;
     background-repeat: no-repeat; /* Display the image once */
