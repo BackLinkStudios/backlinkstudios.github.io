@@ -6,7 +6,7 @@ export default function ContactUs() {
     return (
         <>
             <div className="container _._mt-10">
-                <h2 className="h2_text _._text-center _._text-wrap">
+                <h2 className="h2_text _._text-center _._text-wrap animate__animated animate__flipInX animate__slower">
                     <span className="gradient_text">Contact Us</span>
                 </h2>
             </div>
