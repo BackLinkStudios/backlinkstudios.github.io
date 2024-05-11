@@ -7,11 +7,13 @@ const icon_b = {
         opacity: 0,
         pathLength: 0,
         fill: "rgba(109, 52, 243, 0)",
+        stroke: "rgba(41, 152, 255, 0)",
     },
     visible: {
         opacity: 1,
         pathLength: 1,
         fill: "rgba(109, 52, 243 , 1)",
+        stroke: "rgba(41, 152, 255, 1)",
     },
 };
 const icon_s = {

@@ -6,12 +6,16 @@ import { PiEnvelopeSimple } from "react-icons/pi";
 import { Services } from "@/components/ServiceList";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FcServices } from "react-icons/fc";
 
 export default function OurServices() {
     return (
         <>
             <div className="container _._mt-10">
-                <h2 className="h2_text gradient_text animate__animated animate__flipInX animate__slower _._text-center _._text-wrap">Our Services</h2>
+                <h2 className="h2_text gradient_text animate__animated animate__flipInX animate__slower _._text-center _._text-wrap">
+                    <FcServices style={{ display: "inline-block", marginTop: "-15px", marginRight: "5px" }} />
+                    Our Services
+                </h2>
             </div>
             <Container>
                 <Row>

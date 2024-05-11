@@ -5,6 +5,7 @@ import "./styles.scss";
 import { PiFacebookLogo, PiTwitterLogo, PiLinkedinLogo, PiEnvelopeSimple } from "react-icons/pi";
 import { FaSkype } from "react-icons/fa6";
 import { Members } from "@/components/Members";
+import { FcBusinessman } from "react-icons/fc";
 
 const Member = handleViewport(
     (props: any) => {
@@ -57,7 +58,10 @@ export default function MeetUs() {
         <>
             <div className="container _._mt-10">
                 <h2 className="h2_text _._text-center animate__animated animate__flipInX animate__slower">
-                    <span className="gradient_text">Meet Our Team Of Experts</span>
+                    <span className="gradient_text">
+                        <FcBusinessman style={{ display: "inline-block", marginTop: "-15px", marginRight: "5px" }} />
+                        Meet Our Team Of Experts
+                    </span>
                 </h2>
             </div>
             <section className="section latest-blog bg-2">
