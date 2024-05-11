@@ -25,7 +25,9 @@ export default function RootLayout({
         <>
             <Container className="_._mt-5">
                 <Row>
-                    <b>Services{!!service ? ` / ${service?.heading}` : ""}</b>
+                    <center>
+                        <b>Services{!!service ? ` > ${service?.heading}` : ""}</b>
+                    </center>
                 </Row>
             </Container>
             {children}
