@@ -2,8 +2,7 @@
     background: linear-gradient(89.78deg, rgba(200 184 232 / 20%) -31.69%, rgba(103 33 255 / 20%) -22.78%, rgba(103 33 255 / 20%) 27.93%, rgba(0 203 255 / 20%) 99.79%);
     border: 1px solid rgba(255 255 255 / 15%);
     border-radius: 30px;
-    padding: 4rem;
-    margin: 0 2rem;
+    @apply _._p-8 md:_._p-16;
 }
 .contact-form textarea,
 .contact-form input {
