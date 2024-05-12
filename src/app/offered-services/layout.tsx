@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Container, Row } from "react-bootstrap";
 import { usePathname } from "next/navigation";
 import { Services } from "@/components/ServiceList";
+import { GoChevronRight } from "react-icons/go";
 
 const metadata: Metadata = {
     title: "Offered Services : BacklinkStudios.com",
