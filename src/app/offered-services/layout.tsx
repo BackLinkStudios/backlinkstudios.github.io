@@ -4,7 +4,8 @@ import Link from "next/link";
 import { Container, Row } from "react-bootstrap";
 import { usePathname } from "next/navigation";
 import { Services } from "@/components/ServiceList";
-import { GoChevronRight } from "react-icons/go";
+import { GoChevronLeft } from "react-icons/go";
+import { FcHome, FcNext } from "react-icons/fc";
 
 const metadata: Metadata = {
     title: "Offered Services : BacklinkStudios.com",
@@ -27,14 +28,19 @@ export default function RootLayout({
             <Container className="_._mt-5">
                 <Row>
                     <center>
-                        <b>Services{!!service ? ` > ${service?.heading}` : ""}</b>
+                        <b className="_._whitespace-nowrap">
+                            <FcHome style={{ display: "inline-block", marginTop: "-2px", marginRight: "2px", marginLeft: "2px" }} /> Home
+                            <FcNext style={{ display: "inline-block", marginTop: "-2px", marginRight: "2px", marginLeft: "2px" }} />
+                            Services{!!service ? <FcNext style={{ display: "inline-block", marginTop: "-2px", marginRight: "2px", marginLeft: "2px" }} /> : ""}
+                            {service?.heading}
+                        </b>
                     </center>
                 </Row>
             </Container>
             {children}
             <center>
                 <Link href="/offered-services" type="button" className="_._p-4">
-                    Back to services
+                    <GoChevronLeft style={{ display: "inline-block", marginTop: "-2px", marginRight: "2px", marginLeft: "2px" }} /> Back to services
                 </Link>
             </center>
         </>

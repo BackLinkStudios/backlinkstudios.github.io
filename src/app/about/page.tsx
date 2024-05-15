@@ -45,6 +45,7 @@ export default function About() {
             <div className="container _._mt-10">
                 <h2 className="h2_text _._text-center _._text-wrap animate__animated animate__flipInX animate__slower">
                     <FcAbout style={{ display: "inline-block", marginTop: "-15px", marginRight: "5px" }} />
+                    About
                     <span className="gradient_text">Backlink Studios</span>
                 </h2>
             </div>
