@@ -1,28 +1,31 @@
 .contact-form {
-    background: linear-gradient(89.78deg, rgba(200 184 232 / 20%) -31.69%, rgba(103 33 255 / 20%) -22.78%, rgba(103 33 255 / 20%) 27.93%, rgba(0 203 255 / 20%) 99.79%);
-    border: 1px solid rgba(255 255 255 / 15%);
-    border-radius: 30px;
-    @apply _._p-8 md:_._p-16;
+	background: linear-gradient(89.78deg, rgba(200 184 232 / 20%) -31.69%, rgba(103 33 255 / 20%) -22.78%, rgba(103 33 255 / 20%) 27.93%, rgba(0 203 255 / 20%) 99.79%);
+	border: 1px solid rgba(255 255 255 / 15%);
+	border-radius: 30px;
+	@apply _._p-8 md:_._p-16;
 }
 .contact-form textarea,
-.contact-form input {
-    width: 100%;
-    font-size: 16px;
-    letter-spacing: 0.02em;
-    color: var(--tg-white);
-    background: rgba(230, 238, 251, 0.08);
-    border: 1px solid rgb(181 209 255 / 51%);
-    border-radius: 10px;
-    padding: 10px 20px;
-    height: 50px;
-    display: block;
-    margin: 10px 0;
+.contact-form input,
+.contact-form select {
+	width: 100%;
+	font-size: 16px;
+	letter-spacing: 0.02em;
+	color: var(--tg-white);
+	background: rgba(230, 238, 251, 0.08);
+	border: 1px solid rgb(181 209 255 / 51%);
+	border-radius: 10px;
+	padding: 10px 20px;
+	height: 50px;
+	display: block;
+	margin: 10px 0;
 }
-.contact-form input[type="button"] {
-    background-color: #6721FF;
-    border-radius: 100px;
-    border: 1px solid #a277ff;
+.contact-form input[type="button"],
+.contact-form input[type="submit"] {
+	background-color: #6721ff;
+	border-radius: 100px;
+	border: 1px solid #a277ff;
 }
-.contact-form input[type="button"]:hover{
-    border-bottom-width: 5px;
+.contact-form input[type="button"]:hover,
+.contact-form input[type="submit"]:hover {
+	border-bottom-width: 5px;
 }

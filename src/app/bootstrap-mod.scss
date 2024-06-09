@@ -1,13 +1,17 @@
 $body-bg: #160042;
+$body-color: #ffffff;
+$alert-padding-y: 4px;
+$alert-padding-x: 4px;
+$alert-border-radius: 10px;
 a {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 $grid-breakpoints: (
-  xxs: 0,
-  xs: 320px,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+	xxs: 0,
+	xs: 320px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
 );
