@@ -163,7 +163,7 @@ export default function ContactUs() {
 							<h2 className="_._text-[34px] md:_._text-[38px]">Don’t Hesitate to contact with us for any kind of information</h2>
 							{/* <div className="_._text-lg _._text-white/60">abc</div> */}
 							<ul className="_._p-4">
-								<li>Bankura (West Bengal India) 722137</li>
+								<li>Abee, Alberta, Canada (HQ)</li>
 								<li>Email: lena.backlinkstudios@gmail.com</li>
 								<li>Phone:+1 201 977 2936</li>
 							</ul>
