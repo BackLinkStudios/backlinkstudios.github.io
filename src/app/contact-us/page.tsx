@@ -164,8 +164,8 @@ export default function ContactUs() {
 							{/* <div className="_._text-lg _._text-white/60">abc</div> */}
 							<ul className="_._p-4">
 								<li>Bankura (West Bengal India) 722137</li>
-								<li>Email: thelinkseller@gmail.com</li>
-								<li>Phone:+91 9800358963</li>
+								<li>Email: lena.backlinkstudios@gmail.com</li>
+								<li>Phone:+1 201 977 2936</li>
 							</ul>
 						</div>
 					</div>

@@ -56,9 +56,9 @@ export default function Footer() {
                                 <h4 className="fw-title">Office</h4>
                                 <div className="footer-link">
                                     <ul className="list-wrap">
-                                        <li>Bankura (West Bengal India) 722137</li>
-                                        <li>+91 9800358963</li>
-                                        <li>thelinkseller@gmail.com</li>
+                                        <li>Abee, Alberta, Canada (HQ)</li>
+                                        <li>+1 201 977 2936</li>
+                                        <li>lena.backlinkstudios@gmail.com</li>
                                     </ul>
                                 </div>
                             </div>
