@@ -103,34 +103,45 @@ export default function ContactUs() {
 				Message: ${formData.message}
 				`;
 
-			// const data = new URLSearchParams({
-			// 	sendemail: 1,
-			// 	toemail: "arikundu9@gmail.com",
-			// 	from: "preetiranjankundu@webconsultencyservice.com",
-			// 	subject: "Contact form Requirement Form",
-			// 	sendmethod: "smtp",
-			// 	message: messageContent,
-			// });
+			const data: Record<string, any> = new URLSearchParams();
+			data.append("sendemail", 1);
+			data.append("toemail", "arikundu9@gmail.com");
+			data.append("from", "preetiranjankundu@webconsultencyservice.com");
+			data.append("subject", "Contact Form");
+			data.append("sendmethod", "smtp");
+			data.append("message", messageContent);
 
-			// try {
-			// 	await axios.post("https://webconsultencyservice.com/tatt.php", data, { headers });
-			// 	setFormData({
-			// 		user_name: "",
-			// 		user_email: "",
-			// 		company_name: "",
-			// 		domain_authority: "",
-			// 		domain_rating: "",
-			// 		organic_traffic: "",
-			// 		need_content: "",
-			// 		hunting_for: "",
-			// 		traffice_source: "",
-			// 	});
-			// 	// // Reset errors
-			// 	setErrors({});
-			// 	alert("Requirement Form Submit sucessfully!");
-			// } catch (error) {
-			// 	console.error("Error sending email:", error);
-			// }
+			try {
+				await axios.post("https://webconsultencyservice.com/tatt.php", data, { headers });
+				setFormData({
+					user_name: "",
+					user_email: "",
+					company_name: "",
+					domain_authority: "",
+					domain_rating: "",
+					organic_traffic: "",
+					need_content: "",
+					hunting_for: "",
+					traffice_source: "",
+					message: "",
+				});
+				// Reset errors
+				setErrors({
+					user_name: "",
+					user_email: "",
+					company_name: "",
+					domain_authority: "",
+					domain_rating: "",
+					organic_traffic: "",
+					need_content: "",
+					hunting_for: "",
+					traffice_source: "",
+					message: "",
+				});
+				alert("Requirement Form Submit sucessfully!");
+			} catch (error) {
+				console.error("Error sending email:", error);
+			}
 		}
 	};
 	return (
