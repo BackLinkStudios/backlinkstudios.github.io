@@ -3,12 +3,12 @@ import { getDatabase } from 'firebase/database';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-	apiKey: "YOUR_API_KEY",
-	authDomain: "YOUR_AUTH_DOMAIN",
-	projectId: "YOUR_PROJECT_ID",
-	storageBucket: "YOUR_STORAGE_BUCKET",
-	messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-	appId: "YOUR_APP_ID"
+	apiKey: "AIzaSyDJ5-dEduwpvm8QD6sI0wf-HcYaqEgFSEQ",
+	authDomain: "blstudio.firebaseapp.com",
+	projectId: "blstudio",
+	storageBucket: "blstudio.appspot.com",
+	messagingSenderId: "740702309988",
+	appId: "1:740702309988:web:60952bb127ca0a14c2d971"
 };
 
 const app = initializeApp(firebaseConfig);
