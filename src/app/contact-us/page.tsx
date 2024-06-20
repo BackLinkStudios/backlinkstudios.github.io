@@ -134,7 +134,7 @@ export default function ContactUs() {
 
 			try {
 				// await axios.post("https://webconsultencyservice.com/tatt.php", data, { headers });
-				addDataToFirestore(messageContent);
+				addDataToFirestore(formData);
 				setFormData({
 					user_name: "",
 					user_email: "",
