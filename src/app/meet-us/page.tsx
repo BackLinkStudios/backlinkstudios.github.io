@@ -23,13 +23,13 @@ const Member = handleViewport(
 								<a href={mem.linkendin} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
 									<PiLinkedinLogo />
 								</a>
-								<a href={mem.facebook} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
+								{/* <a href={mem.facebook} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
 									<PiFacebookLogo />
 								</a>
 								<a href={mem.twitter} className="text-white-50 _._ml-2 _._inline-block _._text-xl">
 									<PiTwitterLogo />
 								</a>
-								{getSkype(mem.skype)}
+								{getSkype(mem.skype)} */}
 							</div>
 							<h3 className="my-1 lh-36 text-white">{mem.name}</h3>
 							<a className="btn btn-small btn-solid-border btn-round-full text-white">{mem.designation}</a>
