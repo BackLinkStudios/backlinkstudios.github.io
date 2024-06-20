@@ -5,6 +5,9 @@ import { FcAssistant } from "react-icons/fc";
 import { useRef, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import axios from "axios";
+import { addDoc, collection } from "firebase/firestore";
+import { db, firest } from "@/components/firebase";
+import { ref, set } from "firebase/database";
 
 export default function ContactUs() {
 	const [formData, setFormData] = useState({
@@ -130,7 +133,8 @@ export default function ContactUs() {
 			data.append("message", messageContent);
 
 			try {
-				await axios.post("https://webconsultencyservice.com/tatt.php", data, { headers });
+				// await axios.post("https://webconsultencyservice.com/tatt.php", data, { headers });
+				addDataToFirestore(messageContent);
 				setFormData({
 					user_name: "",
 					user_email: "",
@@ -162,6 +166,25 @@ export default function ContactUs() {
 			}
 		}
 	};
+
+	const setDataToRealtimeDatabase = async (data: any) => {
+		try {
+			set(ref(db, "your_database_path"), data);
+			console.log("Data written to Realtime Database successfully");
+		} catch (e) {
+			console.error("Error writing data to Realtime Database: ", e);
+		}
+	};
+
+	const addDataToFirestore = async (data: any) => {
+		try {
+			const docRef = await addDoc(collection(firest, "your_collection_name"), data);
+			console.log("Document written with ID: ", docRef.id);
+		} catch (e) {
+			console.error("Error adding document: ", e);
+		}
+	};
+
 	return (
 		<>
 			<div className="container _._mt-10">
