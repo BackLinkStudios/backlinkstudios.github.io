@@ -14,7 +14,7 @@ export default function Header() {
         <header>
             <div className="_._boredr _._border-b-2 _._border-fuchsia-600/20">
                 <div className="_._container _._mx-auto _._flex _._justify-end _._text-sm">
-                    <div className="_._p-3 _._text-md md:_._text-lg _._font-semibold">+1 201 977 2936</div>
+                    <div className="_._p-3 _._text-md md:_._text-lg _._font-semibold">+1-201-977-2936</div>
                     <div className="_._p-3 _._text-md md:_._text-lg _._font-semibold">lena.backlinkstudios@gmail.com</div>
                 </div>
             </div>

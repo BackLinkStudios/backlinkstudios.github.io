@@ -57,7 +57,7 @@ export default function Footer() {
                                 <div className="footer-link">
                                     <ul className="list-wrap">
                                         <li>Abee, Alberta, Canada (HQ)</li>
-                                        <li>+1 201 977 2936</li>
+                                        <li>+1-201-977-2936</li>
                                         <li>lena.backlinkstudios@gmail.com</li>
                                     </ul>
                                 </div>

@@ -195,7 +195,7 @@ export default function ContactUs() {
 							<ul className="_._p-4">
 								<li>Abee, Alberta, Canada (HQ)</li>
 								<li>Email: lena.backlinkstudios@gmail.com</li>
-								<li>Phone:+1 201 977 2936</li>
+								<li>Phone:+1-201-977-2936</li>
 							</ul>
 						</div>
 					</div>
