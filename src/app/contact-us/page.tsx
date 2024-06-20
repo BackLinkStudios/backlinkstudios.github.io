@@ -10,6 +10,7 @@ import { db, firest } from "@/components/firebase";
 import { ref, set } from "firebase/database";
 
 export default function ContactUs() {
+	let isError: boolean = false;
 	const [formData, setFormData] = useState({
 		user_name: "",
 		user_email: "",
@@ -42,55 +43,11 @@ export default function ContactUs() {
 			...prevData,
 			[name]: value,
 		}));
+		detectErrors();
 	};
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
-
-		//#region reset errors
-		let isError: boolean = false;
-		setErrors({
-			user_name: "",
-			user_email: "",
-			company_name: "",
-			domain_authority: "",
-			domain_rating: "",
-			organic_traffic: "",
-			need_content: "",
-			hunting_for: "",
-			traffice_source: "",
-			message: "",
-		});
-		//#endregion
-
-		//#region check errors
-		if (!formData.user_name || !formData.user_name.trim()) {
-			isError = true;
-			setErrors((prevData) => ({
-				...prevData,
-				user_name: "Name is required.",
-			}));
-		}
-		if (!formData.user_email || !formData.user_email.trim()) {
-			isError = true;
-			setErrors((prevData) => ({
-				...prevData,
-				user_email: "Email is required.",
-			}));
-		} else if (!/^\S+@\S+\.\S+$/.test(formData.user_email)) {
-			isError = true;
-			setErrors((prevData) => ({
-				...prevData,
-				user_email: "Invalid email format.",
-			}));
-		}
-		if (!formData.message || !formData.message.trim()) {
-			isError = true;
-			setErrors((prevData) => ({
-				...prevData,
-				message: "Message is required.",
-			}));
-		}
-		//#endregion
+		detectErrors();
 
 		if (isError) {
 			console.log("Errors", errors);
@@ -184,6 +141,54 @@ export default function ContactUs() {
 			console.error("Error adding document: ", e);
 		}
 	};
+
+	function detectErrors() {
+		//#region reset errors
+		isError = false;
+		setErrors({
+			user_name: "",
+			user_email: "",
+			company_name: "",
+			domain_authority: "",
+			domain_rating: "",
+			organic_traffic: "",
+			need_content: "",
+			hunting_for: "",
+			traffice_source: "",
+			message: "",
+		});
+		//#endregion
+
+		//#region check errors
+		if (!formData.user_name || !formData.user_name.trim()) {
+			isError = true;
+			setErrors((prevData) => ({
+				...prevData,
+				user_name: "Name is required.",
+			}));
+		}
+		if (!formData.user_email || !formData.user_email.trim()) {
+			isError = true;
+			setErrors((prevData) => ({
+				...prevData,
+				user_email: "Email is required.",
+			}));
+		} else if (!/^\S+@\S+\.\S+$/.test(formData.user_email)) {
+			isError = true;
+			setErrors((prevData) => ({
+				...prevData,
+				user_email: "Invalid email format.",
+			}));
+		}
+		if (!formData.message || !formData.message.trim()) {
+			isError = true;
+			setErrors((prevData) => ({
+				...prevData,
+				message: "Message is required.",
+			}));
+		}
+		//#endregion
+	}
 
 	return (
 		<>
