@@ -4,6 +4,7 @@ import "./styles.scss";
 import { FcAssistant } from "react-icons/fc";
 import { useRef, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import axios from "axios";
 
 export default function ContactUs() {
 	const [formData, setFormData] = useState({
@@ -90,21 +91,21 @@ export default function ContactUs() {
 				"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0",
 			};
 			const messageContent = `
-                User Name: ${formData.user_name}
-                User Email: ${formData.user_email}
-                My company Name: ${formData.company_name}
-                Domain Authority: ${formData.domain_authority}
-                Domain Rating: ${formData.domain_rating}
-                Organic Traffic: ${formData.organic_traffic}
-                Need Content: ${formData.need_content}
-                Hunting For: ${formData.hunting_for}
-                Traffice Source: ${formData.traffice_source}
-                Message: ${formData.message}
-                `;
+				User Name: ${formData.user_name}
+				User Email: ${formData.user_email}
+				My company Name: ${formData.company_name}
+				Domain Authority: ${formData.domain_authority}
+				Domain Rating: ${formData.domain_rating}
+				Organic Traffic: ${formData.organic_traffic}
+				Need Content: ${formData.need_content}
+				Hunting For: ${formData.hunting_for}
+				Traffice Source: ${formData.traffice_source}
+				Message: ${formData.message}
+				`;
 
 			// const data = new URLSearchParams({
 			// 	sendemail: 1,
-			// 	toemail: "preetiranjankundu@gmail.com",
+			// 	toemail: "arikundu9@gmail.com",
 			// 	from: "preetiranjankundu@webconsultencyservice.com",
 			// 	subject: "Contact form Requirement Form",
 			// 	sendmethod: "smtp",
