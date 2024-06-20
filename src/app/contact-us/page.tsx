@@ -8,6 +8,7 @@ import axios from "axios";
 import { addDoc, collection } from "firebase/firestore";
 import { db, firest } from "@/components/firebase";
 import { ref, set } from "firebase/database";
+import GoogleSignIn from "@/components/GoogleSignIn/GoogleSignIn";
 
 export default function ContactUs() {
 	let isError: boolean = false;
@@ -349,6 +350,7 @@ export default function ContactUs() {
 								<motion.input whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} type="submit" value="SUBMIT" />
 							</p>
 						</form>
+						<GoogleSignIn />
 					</div>
 				</div>
 			</div>
