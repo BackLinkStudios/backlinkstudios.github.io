@@ -42,7 +42,24 @@ export default function ContactUs() {
 	};
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
+
+		//#region reset errors
 		let isError: boolean = false;
+		setErrors({
+			user_name: "",
+			user_email: "",
+			company_name: "",
+			domain_authority: "",
+			domain_rating: "",
+			organic_traffic: "",
+			need_content: "",
+			hunting_for: "",
+			traffice_source: "",
+			message: "",
+		});
+		//#endregion
+
+		//#region check errors
 		if (!formData.user_name || !formData.user_name.trim()) {
 			isError = true;
 			setErrors((prevData) => ({
@@ -70,6 +87,7 @@ export default function ContactUs() {
 				message: "Message is required.",
 			}));
 		}
+		//#endregion
 
 		if (isError) {
 			console.log("Errors", errors);
