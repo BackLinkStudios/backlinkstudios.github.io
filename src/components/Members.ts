@@ -9,6 +9,6 @@ export const Members = [
 	// { name: "Pradip Musib", photo: "pradip.png", designation:"Marketing & sales Specialist", email: "thelinkseller.pradip@gmail.com", linkendin: "https://www.linkedin.com/in/pradip-musib/", facebook: "https://www.facebook.com/pradip.musib.1/", twitter: "", skype: "live:.cid.9567d7b66e34cba8" },
 	{ name: "Lena Sanger", photo: "Lena_Sanger.png", designation: "Founder & Outreach Manager", email: "lena.backlinkstudios@gmail.com", linkendin: "https://www.linkedin.com/in/lena-sanger/", facebook: "#facebook", twitter: "#twitter", skype: "#skype" },
 	{ name: "Olivia Kelly", photo: "Olivia_Kelly.png", designation: "SEO Manager", email: "oliviakelly.seo@gmail.com", linkendin: "#linkedin", facebook: "#facebook", twitter: "#twitter", skype: "#skype" },
-	{ name: "John Ranclaud", photo: "photo", designation:"SEO & Link Building Provider", email: "johnranclaud.seo@gmail.com", linkendin: "#linkedin", facebook: "#facebook", twitter: "#twitter", skype: "#skype" },
+	{ name: "John Ranclaud", photo: "noface_male.png", designation:"SEO & Link Building Provider", email: "johnranclaud.seo@gmail.com", linkendin: "#linkedin", facebook: "#facebook", twitter: "#twitter", skype: "#skype" },
 	// { name: "NAME", photo: "photo", designation:"desg", email: "email", linkendin: "#linkedin", facebook: "#facebook", twitter: "#twitter", skype: "#skype" },
 ];

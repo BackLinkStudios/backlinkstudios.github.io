@@ -56,7 +56,7 @@ function getSkype(s: string) {
 export default function MeetUs() {
 	return (
 		<>
-			<div className="container _._mt-10">
+			<div className="container _._my-10">
 				<h2 className="h2_text _._text-center animate__animated animate__flipInX animate__slower">
 					<span className="gradient_text">
 						<FcBusinessman style={{ display: "inline-block", marginTop: "-15px", marginRight: "5px" }} />
