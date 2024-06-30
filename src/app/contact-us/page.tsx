@@ -6,9 +6,10 @@ import { useRef, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import axios from "axios";
 import { addDoc, collection } from "firebase/firestore";
-import { db, firest } from "@/components/firebase";
+import { auth, db, firest, googleProvider } from "@/components/firebase";
 import { ref, set } from "firebase/database";
 import GoogleSignIn from "@/components/GoogleSignIn/GoogleSignIn";
+import { signInWithPopup } from "firebase/auth";
 
 export default function ContactUs() {
 	let isError: boolean = false;
@@ -191,6 +192,23 @@ export default function ContactUs() {
 		//#endregion
 	}
 
+	const handleSignInWithGoogle = async () => {
+		try {
+			const result = await signInWithPopup(auth, googleProvider);
+			let user = result.user;
+			setFormData((prevData) => ({
+				...prevData,
+				["user_name"]: `${user.displayName}`,
+				["user_email"]: `${user.email}`,
+			}));
+			console.log(result);
+
+			alert(`Signed in as ${user.displayName}`);
+		} catch (error: any) {
+			alert(error.message);
+		}
+	};
+
 	return (
 		<>
 			<div className="container _._mt-10">
@@ -350,7 +368,8 @@ export default function ContactUs() {
 								<motion.input whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} type="submit" value="SUBMIT" />
 							</p>
 						</form>
-						<GoogleSignIn />
+						{/* <GoogleSignIn /> */}
+						<button onClick={handleSignInWithGoogle}>Sign in with Google</button>
 					</div>
 				</div>
 			</div>
