@@ -30,7 +30,7 @@ export const Home: FC<any> = (): ReactElement => {
             <br />
             <br />
             <br />
-            <Container>
+            <Container className="_._mb-8">
                 <Row>
                     <Col sm={12} md={6} lg={6}>
                         <img src="./abt3.png" alt="" />
