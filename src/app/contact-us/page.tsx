@@ -369,7 +369,7 @@ export default function ContactUs() {
 							</p>
 						</form>
 						{/* <GoogleSignIn /> */}
-						<div className="_._text-center">
+						<div className="_._text-center _._mt-5">
 							<button className="login-with-google-btn" onClick={handleSignInWithGoogle}>
 								Sign in with Google
 							</button>
