@@ -138,6 +138,7 @@ export default function ContactUs() {
 	const addDataToFirestore = async (data: any) => {
 		try {
 			const docRef = await addDoc(collection(firest, "your_collection_name"), data);
+			console.log(docRef);
 			console.log("Document written with ID: ", docRef.id);
 		} catch (e) {
 			console.error("Error adding document: ", e);
