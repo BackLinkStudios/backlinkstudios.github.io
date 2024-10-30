@@ -13,6 +13,7 @@
         "@firebase/auth": "^1.7.4",
         "animate.css": "^4.1.1",
         "axios": "^1.7.2",
+        "back_link_studio": "file:",
         "bootstrap": "^5.3.3",
         "firebase": "^10.12.2",
         "framer-motion": "^11.1.8",
