@@ -10,6 +10,7 @@ import { auth, db, firest, googleProvider } from "@/components/firebase";
 import { ref, set } from "firebase/database";
 import GoogleSignIn from "@/components/GoogleSignIn/GoogleSignIn";
 import { signInWithPopup } from "firebase/auth";
+import { LeadDetails } from "./interfaces";
 
 export default function ContactUs() {
 	let isError: boolean = false;
@@ -54,46 +55,10 @@ export default function ContactUs() {
 		if (isError) {
 			console.log("Errors", errors);
 		} else {
-			const headers = {
-				authority: "webconsultencyservice.com",
-				accept: "*/*",
-				"accept-language": "en-US,en;q=0.9",
-				"content-type": "application/x-www-form-urlencoded",
-				cookie: "__gsas=ID=a61901dd8b1f6088:T=1707633989:RT=1707633989:S=ALNI_Ma5LSOiq43y12qCKbYm59HbQ9mW0w; pvisitor=34563796-9fe9-401f-a2a6-5f8f38921e9a; _policy=%7B%22restricted_market%22:true,%22tracking_market%22:%22explicit%22%7D; visitor=vid=7f51e255-a7e8-4e6a-bbe7-76298c356a52; PHPSESSID=3260f501a3ff8255337b091a8e5f483b; pathway=1b99cac6-98f3-432f-b154-a8cc77c9dbc6; fb_sessiontraffic=C_TOUCH=2024-02-25T09:06:03.110Z&pathway=1b99cac6-98f3-432f-b154-a8cc77c9dbc6&V_DATE=2024-02-25T09:06:03.105Z&pc=1; OPTOUTMULTI=0:0%7Cc2:1%7Cc9:1%7Cc11:1; pwinteraction=Sun%2C%2025%20Feb%202024%2009%3A06%3A15%20GMT",
-				origin: "https://webconsultencyservice.com",
-				referer: "https://webconsultencyservice.com/tatt.php",
-				"sec-ch-ua": '"Chromium";v="122", "Not(A:Brand";v="24", "Microsoft Edge";v="122"',
-				"sec-ch-ua-mobile": "?0",
-				"sec-ch-ua-platform": '"Windows"',
-				"sec-fetch-dest": "empty",
-				"sec-fetch-mode": "cors",
-				"sec-fetch-site": "same-origin",
-				"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0",
-			};
-			const messageContent = `
-				User Name: ${formData.user_name}
-				User Email: ${formData.user_email}
-				My company Name: ${formData.company_name}
-				Domain Authority: ${formData.domain_authority}
-				Domain Rating: ${formData.domain_rating}
-				Organic Traffic: ${formData.organic_traffic}
-				Need Content: ${formData.need_content}
-				Hunting For: ${formData.hunting_for}
-				Traffice Source: ${formData.traffice_source}
-				Message: ${formData.message}
-				`;
-
-			const data: Record<string, any> = new URLSearchParams();
-			data.append("sendemail", 1);
-			data.append("toemail", "arikundu9@gmail.com");
-			data.append("from", "preetiranjankundu@webconsultencyservice.com");
-			data.append("subject", "Contact Form");
-			data.append("sendmethod", "smtp");
-			data.append("message", messageContent);
-
 			try {
 				// await axios.post("https://webconsultencyservice.com/tatt.php", data, { headers });
-				await addDataToFirestore(formData);
+				// await addDataToFirestore(formData);
+				await sendMessageToGoogleChat(formData);
 				setFormData({
 					user_name: "",
 					user_email: "",
@@ -126,22 +91,25 @@ export default function ContactUs() {
 		}
 	};
 
-	const setDataToRealtimeDatabase = async (data: any) => {
+	// const addDataToFirestore = async (data: any) => {
+	const sendMessageToGoogleChat = async (lead: LeadDetails): Promise<void> => {
 		try {
-			set(ref(db, "your_database_path"), data);
-			console.log("Data written to Realtime Database successfully");
-		} catch (e) {
-			console.error("Error writing data to Realtime Database: ", e);
-		}
-	};
+			const webhookUrl = "https://chat.googleapis.com/v1/spaces/AAAA-RrTYz0/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=pokQaKDZgFEpoMobApM4W1KGbpL4Ux29C4NGCWXzuz0";
+			const response = await axios.post(webhookUrl, {
+				text: `*New Lead Details*\n👤 *Name:* \`${lead.user_name}\`\n📧 *Email:* \`${lead.user_email}\`\n🏢 *Company:* \`${lead.company_name}\`
+\n*Website Metrics:*\n📊 *Domain Authority (DA):* \`${lead.domain_authority}\`\n📈 *Domain Rating (DR):* \`${lead.domain_rating}\`\n🚦 *Organic Traffic:* \`${lead.organic_traffic}\`
+\n*Requirements:*\n✍️ *Needs Content:* \`${lead.need_content}\`\n🎯 *Looking For:* \`${lead.hunting_for}\`\n🌍 *Target Traffic Source:* \`${lead.traffice_source}\`
+\n*Message:*\n\`${lead.message}\`
+					`,
+			});
 
-	const addDataToFirestore = async (data: any) => {
-		try {
-			const docRef = await addDoc(collection(firest, "your_collection_name"), data);
-			console.log(docRef);
-			console.log("Document written with ID: ", docRef.id);
-		} catch (e) {
-			console.error("Error adding document: ", e);
+			if (response.status === 200) {
+				console.log("Message sent successfully");
+			} else {
+				console.error("Failed to send message", response.statusText);
+			}
+		} catch (error) {
+			console.error("Error sending message:", error);
 		}
 	};
 
