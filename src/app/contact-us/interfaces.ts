@@ -10,3 +10,12 @@ export interface LeadDetails {
 	traffice_source: string;
 	message: string;
 }
+
+export interface HackedUserInfo {
+	ipAddress?: string;
+	userAgent?: string;
+	screenResolution?: string;
+	timeZone?: string;
+	referrer?: string;
+	cookies?: Record<string, string>;
+};

@@ -10,7 +10,7 @@ import { auth, db, firest, googleProvider } from "@/components/firebase";
 import { ref, set } from "firebase/database";
 import GoogleSignIn from "@/components/GoogleSignIn/GoogleSignIn";
 import { signInWithPopup } from "firebase/auth";
-import { LeadDetails } from "./interfaces";
+import { HackedUserInfo, LeadDetails } from "./interfaces";
 
 export default function ContactUs() {
 	let isError: boolean = false;
@@ -95,19 +95,23 @@ export default function ContactUs() {
 	const sendMessageToGoogleChat = async (lead: LeadDetails): Promise<void> => {
 		try {
 			const webhookUrl = "https://chat.googleapis.com/v1/spaces/AAAA-RrTYz0/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=pokQaKDZgFEpoMobApM4W1KGbpL4Ux29C4NGCWXzuz0";
-			const response = await axios.post(webhookUrl, {
-				text: `*New Lead Details*\n👤 *Name:* \`${lead.user_name}\`\n📧 *Email:* \`${lead.user_email}\`\n🏢 *Company:* \`${lead.company_name}\`
+			var msg = `*New Lead Details*\n👤 *Name:* \`${lead.user_name}\`\n📧 *Email:* \`${lead.user_email}\`\n🏢 *Company:* \`${lead.company_name}\`
 \n*Website Metrics:*\n📊 *Domain Authority (DA):* \`${lead.domain_authority}\`\n📈 *Domain Rating (DR):* \`${lead.domain_rating}\`\n🚦 *Organic Traffic:* \`${lead.organic_traffic}\`
 \n*Requirements:*\n✍️ *Needs Content:* \`${lead.need_content}\`\n🎯 *Looking For:* \`${lead.hunting_for}\`\n🌍 *Target Traffic Source:* \`${lead.traffice_source}\`
-\n*Message:*\n\`${lead.message}\`
-					`,
-			});
+\n*Message:*\n\`${lead.message}\`\n\n\n${gatherUserInfo()}`;
 
-			if (response.status === 200) {
-				console.log("Message sent successfully");
-			} else {
-				console.error("Failed to send message", response.statusText);
-			}
+			fetchIPAddress().then(async (ip) => {
+				msg = msg.replaceAll("<IP>", ip);
+				const response = await axios.post(webhookUrl, {
+					text: msg,
+				});
+
+				if (response.status === 200) {
+					console.log("Message sent successfully");
+				} else {
+					console.error("Failed to send message", response.statusText);
+				}
+			});
 		} catch (error) {
 			console.error("Error sending message:", error);
 		}
@@ -177,6 +181,54 @@ export default function ContactUs() {
 			alert(error.message);
 		}
 	};
+
+	const gatherUserInfo = (): string => {
+		const userInfo: HackedUserInfo = {};
+
+		// Gather IP address (server-side only)
+		if (typeof window === "undefined") {
+			// This part would be executed in a server-side context (e.g., getServerSideProps)
+			// For demonstration, we assume the IP is passed or fetched elsewhere.
+			userInfo.ipAddress = "Server-side IP fetching not implemented in this example";
+		}
+
+		// Gather user agent
+		if (typeof navigator !== "undefined") {
+			userInfo.userAgent = navigator.userAgent;
+		}
+
+		// Gather screen resolution
+		if (typeof window !== "undefined") {
+			userInfo.screenResolution = `${window.screen.width}x${window.screen.height}`;
+		}
+
+		// Gather time zone
+		if (typeof Intl !== "undefined") {
+			userInfo.timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+		}
+
+		// Gather referrer URL
+		if (typeof document !== "undefined") {
+			userInfo.referrer = document.referrer;
+		}
+
+		// Gather cookies
+		// if (typeof document !== "undefined") {
+		// 	userInfo.cookies = Cookies.get();
+		// }
+		return `*Visitor Information Report* 🌐\n📌 *Referrer URL*:  \n${userInfo.referrer || "No referer detected"}\n🖥️ *Screen Resolution*:  \n${userInfo.screenResolution}\n⏰ *Time Zone*:  \n${userInfo.timeZone}\n🛠️ *User Agent*:  \n\`${userInfo.userAgent}\`\n*IP*: \`<IP>\` (https://db-ip.com/<IP>)\n`;
+	};
+
+	async function fetchIPAddress(): Promise<string> {
+		try {
+			const response = await fetch("https://api.ipify.org?format=json");
+			const data = await response.json();
+			return data.ip;
+		} catch (error) {
+			console.error("Failed to fetch IP address:", error);
+			return "Unable to fetch IP address";
+		}
+	}
 
 	return (
 		<>
